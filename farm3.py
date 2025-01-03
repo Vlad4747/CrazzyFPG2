@@ -268,8 +268,8 @@ class SubMode:
                                                         pass
                                                 await sleep(3)
                                                 await bot.send_message(log_group,f"sub {i}")
-                                                print("sleep 60s")
-                                                await sleep(60)
+                                                print("sleep 30s")
+                                                await sleep(30)
                                             except FloodWait as e:
                                                 await bot.request_callback_answer(msg.chat.id, msg.id, r[1].callback_data)
                                                 print(red,"FloodWait",e.value//70,"m",clear)
@@ -279,7 +279,7 @@ class SubMode:
                                                 await bot.request_callback_answer(msg.chat.id, msg.id, r[1].callback_data)
                                                 self.sleep = False
                     except:
-                        passd
+                        pass
             if self.sleep:
                 await sleep(5)
             self.sleep = True
